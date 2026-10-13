@@ -1,3 +1,5 @@
+import { FaRegBookmark } from "react-icons/fa";
+
 const Navbar = () => {
   return (
     <div className="navbar bg-base-100 shadow-sm">
@@ -26,51 +28,43 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <a>Item 1</a>
+              <a href="#">Browse</a>
             </li>
             <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
+              <a href="#">Companies</a>
             </li>
             <li>
-              <a>Item 3</a>
+              <a href="#">Salaries</a>
+            </li>
+            <li>
+              <a href="#">Post a Job</a>
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <p className="font-bold text-2xl text-slate-800">
+          Dev<span className="text-orange-500">Jobs</span>
+        </p>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 flex gap-4 font-semibold text-slate-800">
           <li>
-            <a>Item 1</a>
+            <a href="#">Browse</a>
           </li>
           <li>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2 bg-base-100 w-40 z-1">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
+            <a href="#">Companies</a>
           </li>
           <li>
-            <a>Item 3</a>
+            <a href="#">Salaries</a>
+          </li>
+          <li>
+            <a href="#">Post a Job</a>
           </li>
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <a className="btn btn-neutral gap-2">
+          <FaRegBookmark /> Saved Jobs: 2
+        </a>
       </div>
     </div>
   );
