@@ -1,17 +1,15 @@
-import Navbar from "./components/Navbar"
+import { FilterSection } from "./components/FilterSection";
+import Navbar from "./components/Navbar";
 
 function App() {
-
   return (
     <>
       <div>
-        
         <Navbar />
-        
-        </div>
-      
+        <FilterSection />
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
