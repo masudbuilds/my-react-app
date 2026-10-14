@@ -1,7 +1,11 @@
 import type { Job } from "../types/Job";
 
-
-export function SavedJobCard({ job }: { job: Job }) {
+interface SavedJobCardProps {
+  job: Job;
+  handleRemoveJob: (job: Job) => void;
+}
+export function SavedJobCard({ job, handleRemoveJob }: SavedJobCardProps) {
+  
   return (
     <div className="p-4 rounded-2xl bg-white border border-slate-200/80 flex flex-col gap-3 mb-4">
       <div>
@@ -11,7 +15,9 @@ export function SavedJobCard({ job }: { job: Job }) {
         </p>
       </div>
 
-      <button className="w-full py-2 text-xs font-semibold text-amber-800 bg-white border border-slate-200 rounded-lg hover:bg-amber-50/50 transition cursor-pointer">
+      <button 
+      onClick={() => handleRemoveJob(job)}
+      className="w-full py-2 text-xs font-semibold text-amber-800 bg-white border border-slate-200 rounded-lg hover:bg-amber-50/50 transition cursor-pointer">
         Remove
       </button>
     </div>

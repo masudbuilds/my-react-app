@@ -14,7 +14,11 @@ const JobSection = ({ jobsData, savedJobs, setSavedJobs }: JobsDataProps) => {
     const updatedJobs = [...filterJobs, job];
     setSavedJobs(updatedJobs);
   };
-  console.log(savedJobs)
+
+  const handleRemoveJob = (job: Job) => {
+    const filterJobs = savedJobs.filter((el) => el.id !== job.id);
+    setSavedJobs(filterJobs);
+  };
   return (
     <div className="container mx-auto flex justify-between gap-6 px-4 pt-10 pb-6">
       {/* Latest Jobs */}
@@ -25,7 +29,12 @@ const JobSection = ({ jobsData, savedJobs, setSavedJobs }: JobsDataProps) => {
         </div>
         <div className="grid grid-cols-2 gap-4">
           {jobsData.map((job) => (
-            <JobCard key={job.id} job={job} handleSaveJob={handleSaveJob} />
+            <JobCard
+              savedJobs={savedJobs}
+              key={job.id}
+              job={job}
+              handleSaveJob={handleSaveJob}
+            />
           ))}
         </div>
       </div>
@@ -37,10 +46,13 @@ const JobSection = ({ jobsData, savedJobs, setSavedJobs }: JobsDataProps) => {
           <p className="text-slate-400">{savedJobs.length} Saved</p>
         </div>
         <div>
-          {
-            savedJobs.map((job) => 
-              <SavedJobCard key={job.id} job={job}/>)
-          }
+          {savedJobs.map((job) => (
+            <SavedJobCard
+              key={job.id}
+              job={job}
+              handleRemoveJob={handleRemoveJob}
+            />
+          ))}
         </div>
       </div>
     </div>
