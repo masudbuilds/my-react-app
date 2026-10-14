@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "title": "React Developer",
+    "company": "Brightlane",
+    "location": "Dhaka",
+    "type": "Full-time",
+    "category": "Frontend",
+    "salary": "BDT 50k-70k",
+    "isSaved": true
+  },
+  {
+    "id": 2,
+    "title": "Node.js Backend Engineer",
+    "company": "Kormo Labs",
+    "location": "Remote",
+    "type": "Full-time",
+    "category": "Backend",
+    "salary": "BDT 70k-95k",
+    "isSaved": false
+  },
+  {
+    "id": 3,
+    "title": "UI/UX Designer",
+    "company": "Pixelnest",
+    "location": "Chattogram",
+    "type": "Contract",
+    "category": "Design",
+    "salary": "BDT 40k-55k",
+    "isSaved": true
+  },
+  {
+    "id": 4,
+    "title": "Next.js Developer",
+    "company": "ShopSphere",
+    "location": "Dhaka",
+    "type": "Full-time",
+    "category": "Frontend",
+    "salary": "BDT 60k-85k",
+    "isSaved": false
+  },
+  {
+    "id": 5,
+    "title": "Express API Developer",
+    "company": "Taskhive",
+    "location": "Remote",
+    "type": "Part-time",
+    "category": "Backend",
+    "salary": "BDT 35k-50k",
+    "isSaved": false
+  },
+  {
+    "id": 6,
+    "title": "Product Designer",
+    "company": "Orbit Studio",
+    "location": "Dhaka",
+    "type": "Full-time",
+    "category": "Design",
+    "salary": "BDT 55k-75k",
+    "isSaved": false
+  },
+  {
+    "id": 7,
+    "title": "Senior Frontend Engineer",
+    "company": "CloudSync",
+    "location": "Sylhet",
+    "type": "Full-time",
+    "category": "Frontend",
+    "salary": "BDT 80k-110k",
+    "isSaved": false
+  },
+  {
+    "id": 8,
+    "title": "Python Django Developer",
+    "company": "DataPulse",
+    "location": "Dhaka",
+    "type": "Full-time",
+    "category": "Backend",
+    "salary": "BDT 65k-90k",
+    "isSaved": false
+  },
+  {
+    "id": 9,
+    "title": "Design Systems Specialist",
+    "company": "CraftUI",
+    "location": "Remote",
+    "type": "Contract",
+    "category": "Design",
+    "salary": "BDT 50k-70k",
+    "isSaved": false
+  },
+  {
+    "id": 10,
+    "title": "Go Microservices Engineer",
+    "company": "PayFlow BD",
+    "location": "Dhaka",
+    "type": "Full-time",
+    "category": "Backend",
+    "salary": "BDT 90k-130k",
+    "isSaved": false
+  }
+]
