@@ -30,7 +30,7 @@ export function MainComponents({ jobsPromise }: MainComponentsProps) {
     }
   };
   return (
-    <>
+    <div className="flex min-h-screen flex-col">
       <Navbar savedJobs={savedJobs} />
       <FilterSection handleTabChange={handleTabChange} />
       <JobSection
@@ -39,6 +39,6 @@ export function MainComponents({ jobsPromise }: MainComponentsProps) {
         setSavedJobs={setSavedJobs}
       />
       <Footer />
-    </>
+    </div>
   );
 }
