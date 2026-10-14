@@ -1,6 +1,7 @@
 import { FaRegBookmark } from "react-icons/fa";
+import type { Job } from "../types/Job";
 
-const Navbar = () => {
+const Navbar = ({savedJobs}: {savedJobs: Job[]}) => {
   return (
     <div className="navbar bg-transparent container mx-auto px-4 py-3">
       {/* Brand Logo & Mobile Menu */}
@@ -81,7 +82,7 @@ const Navbar = () => {
       <div className="navbar-end">
         <button className="flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-lg bg-slate-900 text-white hover:bg-slate-800 transition shadow-sm">
           <FaRegBookmark className="text-xs" />
-          <span>Saved Jobs · 2</span>
+          <span>Saved Jobs · {savedJobs.length}</span>
         </button>
       </div>
     </div>

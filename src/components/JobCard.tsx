@@ -1,7 +1,12 @@
 import { FaRegBookmark } from "react-icons/fa";
 import type { Job } from "../types/Job";
 
-export function JobCard({ job }: { job: Job }) {
+interface JobCardProps {
+  job: Job;
+  handleSaveJob: (job: Job) => void;
+}
+
+export function JobCard({ job, handleSaveJob }: JobCardProps) {
   return (
     <div className="p-5 rounded-2xl bg-white border border-slate-200/80 flex flex-col justify-between gap-6">
       {/* Top Row: Title, Company/Location & Type Badge */}
@@ -22,7 +27,9 @@ export function JobCard({ job }: { job: Job }) {
       <div className="flex items-center justify-between">
         <span className="font-bold text-slate-900 text-sm">{job.salary}</span>
 
-        <button className="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition cursor-pointer">
+        <button 
+        onClick={() => handleSaveJob(job)}
+        className="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition cursor-pointer">
           <FaRegBookmark className="text-[10px]" />
           <span>Save</span>
         </button>

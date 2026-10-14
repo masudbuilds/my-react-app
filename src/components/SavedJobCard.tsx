@@ -3,7 +3,7 @@ import type { Job } from "../types/Job";
 
 export function SavedJobCard({ job }: { job: Job }) {
   return (
-    <div className="p-4 rounded-2xl bg-white border border-slate-200/80 flex flex-col gap-3">
+    <div className="p-4 rounded-2xl bg-white border border-slate-200/80 flex flex-col gap-3 mb-4">
       <div>
         <h4 className="font-bold text-slate-900 text-sm">{job.title}</h4>
         <p className="text-xs text-slate-500 mt-0.5">
