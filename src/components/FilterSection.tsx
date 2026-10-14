@@ -1,4 +1,20 @@
-export function FilterSection() {
+import { useState } from "react";
+import type { FilterCategory } from "../types/Job";
+
+interface FilterSectionProps {
+  handleTabChange: (type: FilterCategory) => void;
+}
+
+export function FilterSection({ handleTabChange }: FilterSectionProps) {
+  const [activeCategory, setActiveCategory] = useState<FilterCategory>("All");
+
+  const selectCategory = (category: FilterCategory) => {
+    setActiveCategory(category);
+    handleTabChange(category);
+  };
+
+  const categories: FilterCategory[] = ["All", "Frontend", "Backend", "Design"];
+
   return (
     <div className="container mx-auto px-4 pt-10 pb-6">
       {/* Title & Subtitle */}
@@ -40,18 +56,25 @@ export function FilterSection() {
 
         {/* Filter Pills */}
         <div className="flex items-center gap-2 overflow-x-auto pb-1 md:pb-0">
-          <button className="px-5 py-2 text-xs font-semibold rounded-full bg-slate-900 text-white shadow-xs hover:bg-slate-800 transition">
-            All
-          </button>
-          <button className="px-5 py-2 text-xs font-medium rounded-full bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition">
-            Frontend
-          </button>
-          <button className="px-5 py-2 text-xs font-medium rounded-full bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition">
-            Backend
-          </button>
-          <button className="px-5 py-2 text-xs font-medium rounded-full bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition">
-            Design
-          </button>
+          {categories.map((category) => {
+            const isActive = activeCategory === category;
+
+            return (
+              <button
+                key={category}
+                type="button"
+                aria-pressed={isActive}
+                onClick={() => selectCategory(category)}
+                className={`shrink-0 rounded-full border px-5 py-2 text-xs font-semibold transition ${
+                  isActive
+                    ? "border-slate-900 bg-slate-900 text-white shadow-xs hover:bg-slate-800"
+                    : "border-slate-200 bg-white text-slate-700 hover:bg-slate-50"
+                }`}
+              >
+                {category}
+              </button>
+            );
+          })}
         </div>
       </div>
     </div>
